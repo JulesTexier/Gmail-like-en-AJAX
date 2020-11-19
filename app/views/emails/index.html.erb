@@ -1,0 +1,28 @@
+<div class="p-5">
+  <h2>Recevoir un Email</h2>
+  <%= link_to "Recevoir un email", emails_path, method: :post, class: "btn btn-info", remote: true %>
+</div>
+<div class="container p-5">
+  <table class="table-striped" style="width:1000px">
+    <thead class=thead-dark>
+      <tr>
+        <th scope="col">Liste des emails</th>
+        <th scope="col">Lire</th>
+        <th scope="col">Lu</th>
+        <th scope="col"> Y/N</th>
+        <th scope="col" style="width:80%"> Email sélectionné</th>
+      </tr>
+    </thead>
+    <tbody class="all_emails">
+      <% @emails.each_with_index do |email, i|  %>
+      <tr class= "email-<%=email.id%>">
+        <td scope="row" class="mail"> <%= email.object%> </td>
+        <td scope="row" class="mail"> <%= link_to "Lire", email_path(email.id), class: "btn btn-outline-info", remote: true %> </td>
+        <td scope="row" class="mail"> <%= email.read%> </td>
+        <td scope="row" class="mail">  </td>
+        <td scope="row" class="mail">  </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

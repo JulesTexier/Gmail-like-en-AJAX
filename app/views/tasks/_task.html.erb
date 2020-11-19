@@ -1,0 +1,11 @@
+
+ <ul>
+ <li id= "task-<%=@task.id%>">
+    <%= task.title%>
+    <% unless task.deadline.nil? %>
+    , <b>deadline</b> : <%= task.deadline.strftime('%D')  %>
+    <% end %>
+    <%= link_to ('<i class="fa fa-trash"></i>').html_safe, task_path(task), method: :delete, remote: true  %>
+ </li>
+ </ul>
+

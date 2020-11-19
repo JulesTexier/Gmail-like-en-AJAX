@@ -1,0 +1,4 @@
+document.querySelector(".email-<%=@email.id%>").insertAdjacentHTML("beforeend", "<%= j render 'body', email: @email %>")
+document.querySelectorAll("tr.email-<%=@email.id%> > td.mail")[2].innerHTML = "true"
+
+

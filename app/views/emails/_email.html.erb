@@ -1,0 +1,10 @@
+
+
+      <tr class= "email-<%=email.id%>">
+        <td scope="row" class="mail"> <%= email.object%> </td>
+        <td scope="row" class="mail"> <%= link_to "Lire", email_path(email.id), class: "btn btn-outline-info", remote: true %> </td>
+        <td scope="row" class="mail"> <%= email.read%> </td>
+      </tr>
+
+
+
