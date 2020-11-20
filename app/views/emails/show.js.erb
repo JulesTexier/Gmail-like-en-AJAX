@@ -1,3 +1,4 @@
 document.querySelector(".email-<%=@email.id%>").insertAdjacentHTML("beforeend", "<%= j render 'body', email: @email %>")
 document.querySelectorAll("tr.email-<%=@email.id%> > td.mail")[2].innerHTML = "true"
+document.querySelectorAll("tr.email-<%=@email.id%> > td.mail")[1].innerHTML = ""
 document.querySelectorAll("tr.email-<%=@email.id%> > td.mail")[0].style.fontWeight = "lighter"
