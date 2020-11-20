@@ -16,7 +16,7 @@
     <tbody class="all_emails">
       <% @emails.each_with_index do |email, i|  %>
       <tr class= "email-<%=email.id%>">
-        <td scope="row" class="mail"> <%= email.object%> </td>
+        <td scope="row" class="mail"> <b><%= email.object%></b> </td>
         <td scope="row" class="mail"> <%= link_to "Lire", email_path(email.id), class: "btn btn-outline-info", remote: true %> </td>
         <td scope="row" class="mail"> <%= email.read%> </td>
         <td scope="row" class="mail">  </td>
